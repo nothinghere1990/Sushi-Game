@@ -12,6 +12,6 @@ public class Item : ScriptableObject
 {
     public Sprite image;
     public ItemType itemType;
-    public bool stackble;
     public bool isRice;
+    public int price;
 }

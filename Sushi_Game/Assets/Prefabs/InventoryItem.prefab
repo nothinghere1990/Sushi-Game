@@ -170,11 +170,13 @@ MonoBehaviour:
   item: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   parentAfterDrag2: {fileID: 0}
-  itemCount: 1
   inventoryManager: {fileID: -7639093238739766943, guid: 0988977b79ed271458bbe53372428b60, type: 3}
   multiplyByTen: {fileID: 0}
   itemCountAfterDrag: 0
   itemCountText: {fileID: 8045645436811726893}
+  moneyController: {fileID: 3480043017966966940, guid: 1207a3ca3d7f5604587b6ec1869f4352, type: 3}
+  itemCount: 1
+  itemPrice: 0
   image: {fileID: 8944540246654535383}
   isDragging: 0
 --- !u!1 &3670645254877329084

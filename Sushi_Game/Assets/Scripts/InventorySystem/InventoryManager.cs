@@ -12,6 +12,7 @@ public class InventoryManager : MonoBehaviour
     public Transform multiplyByTen;
     public InventorySlot[] inventorySlots;
     public GameObject inventoryItemPrefab;
+    public MoneyController moneyController;
 
     public void Start()
     {
@@ -27,9 +28,12 @@ public class InventoryManager : MonoBehaviour
         
         if (!on)
         {
-            for (int i = 0; i < inventorySlots.Length; i++)
+            for (int i = 0; 
+                 i < inventorySlots.Length; 
+                 i++)
             {
                 itemInSlot = inventorySlots[i].GetComponentInChildren<DraggingItem>();
+                
                 if (itemInSlot != null)
                 {
                     inventorySlots[i].image.raycastTarget = true;
@@ -39,10 +43,14 @@ public class InventoryManager : MonoBehaviour
         }
         else
         {
-            for (int i = 0; i < inventorySlots.Length; i++)
+            for (int i = 0; 
+                 i < inventorySlots.Length; 
+                 i++)
             {
                 itemInSlot = inventorySlots[i].GetComponentInChildren<DraggingItem>();
-                if (itemInSlot != null && i < inventorySlots.Length / 2)
+                
+                if (itemInSlot != null && 
+                    i < inventorySlots.Length / 2)
                 {
                     inventorySlots[i].image.raycastTarget = false;
                     itemInSlot.image.raycastTarget = false;
@@ -53,10 +61,13 @@ public class InventoryManager : MonoBehaviour
 
     public bool FindSlot(Item item)
     {
-        for (int i = 0; i < inventorySlots.Length; i++)
+        for (int i = 0; 
+             i < inventorySlots.Length; 
+             i++)
         {
             InventorySlot slot = inventorySlots[i];
             DraggingItem itemInSlot = slot.GetComponentInChildren<DraggingItem>();
+            
             if (itemInSlot == null)
             {
                 slot.image.raycastTarget = false;
@@ -71,7 +82,7 @@ public class InventoryManager : MonoBehaviour
     {
         GameObject newItemGo = Instantiate(inventoryItemPrefab, slot.transform);
         DraggingItem draggingItem = newItemGo.GetComponent<DraggingItem>();
-        draggingItem.InitialiseItem(item, transform.GetComponent<InventoryManager>(), random, itemCountAfterDrag);
+        draggingItem.InitialiseItem(item, transform.GetComponent<InventoryManager>(), random, itemCountAfterDrag, moneyController);
     }
 
     public void CurrentBackToSlot()
@@ -81,11 +92,15 @@ public class InventoryManager : MonoBehaviour
 
     public void ManagerDropped()
     {
-        if (!modeSwitch && currentDraggingItem.isDragging)
+        if (!modeSwitch && 
+            currentDraggingItem.isDragging)
         {
-            for (int i = 0; i < inventorySlots.Length; i++)
+            for (int i = 0; 
+                 i < inventorySlots.Length; 
+                 i++)
             {
                 DraggingItem itemInSlot = inventorySlots[i].GetComponentInChildren<DraggingItem>();
+                
                 if (itemInSlot != null)
                 {
                     itemInSlot.image.raycastTarget = true;
@@ -101,5 +116,10 @@ public class InventoryManager : MonoBehaviour
             currentDraggingItem = null;
             clickedInventorySlot.GetComponent<InventorySlot>().image.raycastTarget = false;
         }
+    }
+
+    public void BringItemToNextScene()
+    {
+        
     }
 }

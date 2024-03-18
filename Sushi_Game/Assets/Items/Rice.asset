@@ -16,3 +16,4 @@ MonoBehaviour:
   itemType: 0
   stackble: 1
   isRice: 1
+  price: 2

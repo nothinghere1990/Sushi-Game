@@ -38,7 +38,6 @@ public class SceneController : MonoBehaviour
         {
             StartCoroutine(LoadScene(1));
         }
-        
     }
     
     public void LastScene()
