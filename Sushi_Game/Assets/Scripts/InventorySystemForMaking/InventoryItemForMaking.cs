@@ -1,17 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryItemForMaking : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Item item;
+    public Transform parentAfterDrag;
+    public InventoryManager inventoryManager;
+    public TMP_Text itemCountText;
+    
+    public int itemCount = 1;
+    public Image image;
+    
+    public void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void InitialiseItemFromLastScene(Sprite imageFromLastScene, int itemCountFromLastScene)
+    {
+        image.sprite = imageFromLastScene;
+        itemCount = itemCountFromLastScene;
+        itemCountText.text = itemCount.ToString();
+    }
+    
+    public void InitialiseItem(Item item, InventoryManagerForMaking inventoryManagerForMaking)
     {
         
     }

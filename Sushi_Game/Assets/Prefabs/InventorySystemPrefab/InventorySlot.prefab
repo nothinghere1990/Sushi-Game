@@ -119,6 +119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryManager: {fileID: -7639093238739766943, guid: 0988977b79ed271458bbe53372428b60, type: 3}
   image: {fileID: 4187966013411298133}
+  moneyController: {fileID: 0}
 --- !u!114 &4005771337214088829
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1663,10 +1663,22 @@ PrefabInstance:
       propertyPath: inventorySlots.Array.data[9]
       value: 
       objectReference: {fileID: 1509819592}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 629757997677409311, guid: 0988977b79ed271458bbe53372428b60, type: 3}
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3784681056227925289, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3784681056227925289, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9fa6ef92d80b0bd498bc640108a636f0, type: 3}
     - target: {fileID: 6653791646397345768, guid: 0988977b79ed271458bbe53372428b60, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1694,6 +1706,14 @@ PrefabInstance:
     - target: {fileID: 6653791646397345768, guid: 0988977b79ed271458bbe53372428b60, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6653791646397345768, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -83
+      objectReference: {fileID: 0}
+    - target: {fileID: 6653791646397345768, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 137
       objectReference: {fileID: 0}
     - target: {fileID: 6653791646397345768, guid: 0988977b79ed271458bbe53372428b60, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2163,7 +2183,7 @@ MonoBehaviour:
   rows: 2
   columns: 5
   cellSize: {x: 90, y: 123}
-  spacing: {x: 91.45447, y: 97.95929}
+  spacing: {x: 48.219177, y: 97.95929}
   fitSpacingX: 1
   fitSpacingY: 1
 --- !u!114 &1123585553
@@ -2489,6 +2509,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1042388605}
     - target: {fileID: 8536408649415506436, guid: 7d5db8200e83d4d4f95a9480f186c19e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2065647609}
+    - target: {fileID: 8536408649415506436, guid: 7d5db8200e83d4d4f95a9480f186c19e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -2497,8 +2521,16 @@ PrefabInstance:
       value: NextScene
       objectReference: {fileID: 0}
     - target: {fileID: 8536408649415506436, guid: 7d5db8200e83d4d4f95a9480f186c19e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: BringItemToNextScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536408649415506436, guid: 7d5db8200e83d4d4f95a9480f186c19e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: SceneController, Assembly-CSharp
+      value: InventoryManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536408649415506436, guid: 7d5db8200e83d4d4f95a9480f186c19e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3175,7 +3207,7 @@ MonoBehaviour:
   rows: 1
   columns: 4
   cellSize: {x: 220, y: 60}
-  spacing: {x: 108.455894, y: 0}
+  spacing: {x: 50.808838, y: 0}
   fitSpacingX: 1
   fitSpacingY: 0
 --- !u!114 &1675042856
@@ -4402,7 +4434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMoneyText: {fileID: 0}
-  playerMoney: 500
+  targetMoney: 0
 --- !u!1001 &6191798337253440884
 PrefabInstance:
   m_ObjectHideFlags: 0

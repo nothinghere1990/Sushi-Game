@@ -4,19 +4,25 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    
     [HideInInspector] public Transform clickedInventorySlot;
-    
+
     public DraggingItem currentDraggingItem;
     public bool modeSwitch;
     public Transform multiplyByTen;
     public InventorySlot[] inventorySlots;
     public GameObject inventoryItemPrefab;
     public MoneyController moneyController;
+    public Sprite[] nonStaticCarryPlayerIngredientImgs;
+    public int[] nonStaticCarryPlayerIngredientCounts;
+
+    public static Sprite[] CarryPlayerIngredientImgs;
+    public static int[] CarryPlayerIngredientCounts;
 
     public void Start()
     {
         ModeSwitch(multiplyByTen.GetComponent<Toggle>().isOn);
+        nonStaticCarryPlayerIngredientImgs = new Sprite[inventorySlots.Length / 2];
+        nonStaticCarryPlayerIngredientCounts = new int[inventorySlots.Length / 2];
     }
 
     public void ModeSwitch(bool on)
@@ -25,15 +31,15 @@ public class InventoryManager : MonoBehaviour
         multiplyByTen.GetComponent<Toggle>().enabled = !on;
         multiplyByTen.GetChild(0).gameObject.SetActive(!on);
         DraggingItem itemInSlot;
-        
+
         if (!on)
         {
-            for (int i = 0; 
-                 i < inventorySlots.Length; 
+            for (int i = 0;
+                 i < inventorySlots.Length;
                  i++)
             {
                 itemInSlot = inventorySlots[i].GetComponentInChildren<DraggingItem>();
-                
+
                 if (itemInSlot != null)
                 {
                     inventorySlots[i].image.raycastTarget = true;
@@ -43,13 +49,13 @@ public class InventoryManager : MonoBehaviour
         }
         else
         {
-            for (int i = 0; 
-                 i < inventorySlots.Length; 
+            for (int i = 0;
+                 i < inventorySlots.Length;
                  i++)
             {
                 itemInSlot = inventorySlots[i].GetComponentInChildren<DraggingItem>();
-                
-                if (itemInSlot != null && 
+
+                if (itemInSlot != null &&
                     i < inventorySlots.Length / 2)
                 {
                     inventorySlots[i].image.raycastTarget = false;
@@ -61,13 +67,13 @@ public class InventoryManager : MonoBehaviour
 
     public bool FindSlot(Item item)
     {
-        for (int i = 0; 
-             i < inventorySlots.Length; 
+        for (int i = 0;
+             i < inventorySlots.Length;
              i++)
         {
             InventorySlot slot = inventorySlots[i];
             DraggingItem itemInSlot = slot.GetComponentInChildren<DraggingItem>();
-            
+
             if (itemInSlot == null)
             {
                 slot.image.raycastTarget = false;
@@ -75,6 +81,7 @@ public class InventoryManager : MonoBehaviour
                 return true;
             }
         }
+
         return false;
     }
 
@@ -82,31 +89,33 @@ public class InventoryManager : MonoBehaviour
     {
         GameObject newItemGo = Instantiate(inventoryItemPrefab, slot.transform);
         DraggingItem draggingItem = newItemGo.GetComponent<DraggingItem>();
-        draggingItem.InitialiseItem(item, transform.GetComponent<InventoryManager>(), random, itemCountAfterDrag, moneyController);
+        draggingItem.InitialiseItem(item, transform.GetComponent<InventoryManager>(), random, itemCountAfterDrag,
+            moneyController);
     }
 
     public void CurrentBackToSlot()
     {
-       currentDraggingItem.BackToSlot();
+        currentDraggingItem.BackToSlot();
     }
 
     public void ManagerDropped()
     {
-        if (!modeSwitch && 
+        if (!modeSwitch &&
             currentDraggingItem.isDragging)
         {
-            for (int i = 0; 
-                 i < inventorySlots.Length; 
+            for (int i = 0;
+                 i < inventorySlots.Length;
                  i++)
             {
                 DraggingItem itemInSlot = inventorySlots[i].GetComponentInChildren<DraggingItem>();
-                
+
                 if (itemInSlot != null)
                 {
                     itemInSlot.image.raycastTarget = true;
                 }
             }
         }
+
         if (currentDraggingItem.isDragging)
         {
             currentDraggingItem.image.raycastTarget = true;
@@ -120,6 +129,23 @@ public class InventoryManager : MonoBehaviour
 
     public void BringItemToNextScene()
     {
-        
+        int i = inventorySlots.Length / 2;
+
+        for (int j = 0;
+             j < inventorySlots.Length / 2;
+             j++)
+        {
+            if (inventorySlots[i].GetComponentInChildren<DraggingItem>() != null)
+            {
+                nonStaticCarryPlayerIngredientImgs[j] = inventorySlots[i].transform.GetChild(1).GetComponent<Image>().sprite;
+                nonStaticCarryPlayerIngredientCounts[j] =
+                    inventorySlots[i].GetComponentInChildren<DraggingItem>().itemCount;
+            }
+
+            i++;
+        }
+
+        CarryPlayerIngredientImgs = nonStaticCarryPlayerIngredientImgs;
+        CarryPlayerIngredientCounts = nonStaticCarryPlayerIngredientCounts;
     }
 }
