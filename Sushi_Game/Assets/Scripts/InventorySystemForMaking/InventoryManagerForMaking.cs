@@ -1,13 +1,25 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryManagerForMaking : MonoBehaviour
 {
     public InventorySlotForMaking[] playerIngredientSlots;
     public GameObject inventoryItemPrefabForMaking;
+    public Transform draggingItem;
 
     public void Start()
     {
+        ManagerInitializesInventorySlotsForMaking();
         BringItemFromLastScene();
+    }
+
+    public void ManagerInitializesInventorySlotsForMaking()
+    {
+        for (int i = 0; i < playerIngredientSlots.Length; i++)
+        {
+            playerIngredientSlots[i]
+                .InitializeInventorySlotsForMaking(transform.GetComponent<InventoryManagerForMaking>());
+        }
     }
 
     public void BringItemFromLastScene()
@@ -22,32 +34,25 @@ public class InventoryManagerForMaking : MonoBehaviour
                 InventoryItemForMaking inventoryItemForMaking = newItemGo.GetComponent<InventoryItemForMaking>();
                 inventoryItemForMaking.InitialiseItemFromLastScene(
                     InventoryManager.CarryPlayerIngredientImgs[i],
-                    InventoryManager.CarryPlayerIngredientCounts[i]);
+                    InventoryManager.CarryPlayerIngredientCounts[i],
+                    transform.GetComponent<InventoryManagerForMaking>());
             }
         }
     }
 
-    public void FindPlayerIngredientSlots(Item item)
+    public void ClickOutsideOfSlots()
     {
-        for (int i = 0;
-             i < playerIngredientSlots.Length;
-             i++)
+        if (draggingItem.GetComponent<InventoryItemForMaking>().parentAfterDrag.childCount == 0)
         {
-            InventorySlotForMaking slot = playerIngredientSlots[i];
-            InventoryItemForMaking itemInSlot = slot.GetComponentInChildren<InventoryItemForMaking>();
-
-            if (itemInSlot == null)
-            {
-                SpawnNewItemToPlayerIngredientSlots(item, slot);
-                return;
-            }
+            draggingItem.SetParent(draggingItem.GetComponent<InventoryItemForMaking>().parentAfterDrag);
+            draggingItem.GetComponent<Image>().raycastTarget = true;
+            draggingItem.GetComponent<InventoryItemForMaking>().parentAfterDrag = null;
+            draggingItem = null;
         }
-    }
-
-    public void SpawnNewItemToPlayerIngredientSlots(Item item, InventorySlotForMaking slot)
-    {
-        GameObject newItemGo = Instantiate(inventoryItemPrefabForMaking, slot.transform);
-        InventoryItemForMaking inventoryItemForMaking = newItemGo.GetComponent<InventoryItemForMaking>();
-        inventoryItemForMaking.InitialiseItem(item, transform.GetComponent<InventoryManagerForMaking>());
+        else
+        {
+            draggingItem.GetComponent<InventoryItemForMaking>().parentAfterDrag
+                .GetComponentInChildren<InventoryItemForMaking>().CheckIfHoldItemAndPutBackAndPickup();
+        }
     }
 }

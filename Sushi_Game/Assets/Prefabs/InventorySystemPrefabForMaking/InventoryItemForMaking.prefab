@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 1851153998095329478}
   - component: {fileID: 2963102441769142157}
   - component: {fileID: 2874924408142005926}
+  - component: {fileID: -8314272498835359908}
   - component: {fileID: 3946903146266020933}
   - component: {fileID: 8441604598672617500}
   m_Layer: 5
@@ -212,6 +213,26 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &-8314272498835359908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7675342078256702827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: 60
+  m_PreferredHeight: 60
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &3946903146266020933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,7 +276,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2874924408142005926}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8441604598672617500}
+        m_TargetAssemblyTypeName: InventoryItemForMaking, Assembly-CSharp
+        m_MethodName: CheckIfHoldItemAndPutBackAndPickup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8441604598672617500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,7 +303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 0}
   parentAfterDrag: {fileID: 0}
-  inventoryManager: {fileID: 0}
-  itemCountText: {fileID: 1307638884372780412}
   itemCount: 1
   image: {fileID: 2874924408142005926}
+  inventoryManagerForMaking: {fileID: 0}
+  itemCountText: {fileID: 1307638884372780412}

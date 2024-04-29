@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4100273929581195857}
   - component: {fileID: 1221853699453877087}
   - component: {fileID: 5430662832435858898}
+  - component: {fileID: 5109739920785574705}
   - component: {fileID: 8990026392518881586}
   - component: {fileID: -2663733089758341452}
   m_Layer: 5
@@ -77,6 +78,32 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5109739920785574705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7037986344815915620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 1
 --- !u!114 &8990026392518881586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,7 +147,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5430662832435858898}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -2663733089758341452}
+        m_TargetAssemblyTypeName: InventorySlotForMaking, Assembly-CSharp
+        m_MethodName: ClickOnSlot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &-2663733089758341452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,3 +172,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f8a9c7d984807408b755855368c66d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryItemForMaking: {fileID: 0}
