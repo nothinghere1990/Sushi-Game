@@ -13,7 +13,17 @@ MonoBehaviour:
   m_Name: Salmon
   m_EditorClassIdentifier: 
   image: {fileID: 21300000, guid: c813eefb458635942b0a3a5442648bef, type: 3}
-  itemType: 0
-  stackble: 1
   isRice: 0
   price: 5
+  recipe1:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  recipe2:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  recipe3:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

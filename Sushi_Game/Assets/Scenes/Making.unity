@@ -1267,7 +1267,7 @@ MonoBehaviour:
   rows: 1
   columns: 3
   cellSize: {x: 100, y: 100}
-  spacing: {x: 42.659546, y: 127.602295}
+  spacing: {x: 43.12036, y: 127.602295}
   fitSpacingX: 1
   fitSpacingY: 0
 --- !u!114 &1060956384
@@ -1316,6 +1316,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1849131481}
     m_Modifications:
+    - target: {fileID: -2663733089758341452, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}
+      propertyPath: craftingSlotIndex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4100273929581195857, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1707,7 +1711,7 @@ MonoBehaviour:
   rows: 1
   columns: 5
   cellSize: {x: 100, y: 100}
-  spacing: {x: 110.33432, y: 127.602295}
+  spacing: {x: 110.56473, y: 127.602295}
   fitSpacingX: 1
   fitSpacingY: 0
 --- !u!1001 &1364434981
@@ -1937,6 +1941,58 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: craftingResultSlot
+      value: 
+      objectReference: {fileID: 29468967}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: sushiArray.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: craftingSlots.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: sushiArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 831ac1cd67594214cb04f95da5744b07, type: 2}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: sushiArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: d803a811901f19e4f8f6b83d77f14d38, type: 2}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: sushiArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: d271425359817e64da0b57edde2fac14, type: 2}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: sushiArray.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 194f816681450ba4fa1eb1a21ed3d070, type: 2}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: sushiArray.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 739cc076d07f27d4aa88077ea69baa62, type: 2}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: sushiArray.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 36194c0f261240047b0ca150122640cb, type: 2}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: craftingSlots.Array.data[0]
+      value: 
+      objectReference: {fileID: 1775462488}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: craftingSlots.Array.data[1]
+      value: 
+      objectReference: {fileID: 1089190811}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: craftingSlots.Array.data[2]
+      value: 
+      objectReference: {fileID: 2065335234}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: craftingSlots.Array.data[3]
+      value: 
+      objectReference: {fileID: 29468967}
     - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
       propertyPath: inventoryItemPrefabForMaking
       value: 
@@ -2661,6 +2717,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1849131481}
     m_Modifications:
+    - target: {fileID: -2663733089758341452, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}
+      propertyPath: craftingSlotIndex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4100273929581195857, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2768,7 +2828,7 @@ GameObject:
   - component: {fileID: 1849131483}
   - component: {fileID: 1849131482}
   m_Layer: 5
-  m_Name: MakingTable
+  m_Name: CraftingTable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2895,7 +2955,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
 --- !u!114 &1882460163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2979,6 +3039,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1849131481}
     m_Modifications:
+    - target: {fileID: -2663733089758341452, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}
+      propertyPath: craftingSlotIndex
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4100273929581195857, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

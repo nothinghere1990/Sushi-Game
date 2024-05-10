@@ -2183,7 +2183,7 @@ MonoBehaviour:
   rows: 2
   columns: 5
   cellSize: {x: 90, y: 123}
-  spacing: {x: 48.219177, y: 97.95929}
+  spacing: {x: 48.2529, y: 97.95929}
   fitSpacingX: 1
   fitSpacingY: 1
 --- !u!114 &1123585553
@@ -3207,7 +3207,7 @@ MonoBehaviour:
   rows: 1
   columns: 4
   cellSize: {x: 220, y: 60}
-  spacing: {x: 50.808838, y: 0}
+  spacing: {x: 50.8538, y: 0}
   fitSpacingX: 1
   fitSpacingY: 0
 --- !u!114 &1675042856
@@ -4106,7 +4106,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
 --- !u!114 &2092332720
 MonoBehaviour:
   m_ObjectHideFlags: 0

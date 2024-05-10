@@ -13,13 +13,19 @@ public class InventoryItemForMaking : MonoBehaviour
     [HideInInspector] public InventoryManagerForMaking inventoryManagerForMaking;
     [HideInInspector] public TMP_Text itemCountText;
 
-    public void InitialiseItemFromLastScene(Sprite imageFromLastScene, int itemCountFromLastScene,
+    public void InitializeItemFromLastScene(Sprite imageFromLastScene, int itemCountFromLastScene,
         InventoryManagerForMaking inventoryManagerForMaking)
     {
         image.sprite = imageFromLastScene;
         itemCount = itemCountFromLastScene;
         itemCountText.text = itemCount.ToString();
         this.inventoryManagerForMaking = inventoryManagerForMaking;
+    }
+
+    public void InitializeItem(InventoryManagerForMaking inventoryManagerForMaking)
+    {
+        this.inventoryManagerForMaking = inventoryManagerForMaking;
+        itemCountText.text = itemCount.ToString();
     }
 
     public void CheckIfHoldItemAndPutBackAndPickup()
@@ -90,11 +96,29 @@ public class InventoryItemForMaking : MonoBehaviour
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
         image.raycastTarget = false;
+        ConnectToCrafting();
+    }
+
+    public void ConnectToCrafting()
+    {
+        foreach (var craftingSlot in inventoryManagerForMaking.craftingSlots)
+        {
+            if (parentAfterDrag == craftingSlot)
+            {
+                inventoryManagerForMaking.Crafting();
+            }
+        }
+
+        if (parentAfterDrag == inventoryManagerForMaking.craftingResultSlot &&
+            inventoryManagerForMaking.craftingResultSlot.childCount == 0)
+        {
+            inventoryManagerForMaking.RemoveItemFromCrafting();
+        }
     }
 
     public void Update()
     {
-        if (inventoryManagerForMaking.draggingItem == transform)
+        if (inventoryManagerForMaking.draggingItem != null && inventoryManagerForMaking.draggingItem == transform)
         {
             inventoryManagerForMaking.draggingItem.position = Input.mousePosition;
         }

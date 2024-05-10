@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f814d85b2faa3ef4ea15620b35969a1c, type: 3}
+  m_Name: Salmon Nigiri Sushi
+  m_EditorClassIdentifier: 
+  image: {fileID: 21300000, guid: 97dbe97513a8c95488482ca961be0414, type: 3}
+  isRice: 0
+  price: 0
+  recipe1:
+  - {fileID: 21300000, guid: 9fa6ef92d80b0bd498bc640108a636f0, type: 3}
+  - {fileID: 21300000, guid: c813eefb458635942b0a3a5442648bef, type: 3}
+  - {fileID: 0}
+  recipe2:
+  - {fileID: 21300000, guid: 9fa6ef92d80b0bd498bc640108a636f0, type: 3}
+  - {fileID: 0}
+  - {fileID: 21300000, guid: c813eefb458635942b0a3a5442648bef, type: 3}
+  recipe3:
+  - {fileID: 0}
+  - {fileID: 21300000, guid: 9fa6ef92d80b0bd498bc640108a636f0, type: 3}
+  - {fileID: 21300000, guid: c813eefb458635942b0a3a5442648bef, type: 3}

@@ -3,12 +3,14 @@ using UnityEngine;
 
 public class InventorySlotForMaking : MonoBehaviour
 {
-    public InventoryItemForMaking inventoryItemForMaking;
-    public InventoryManagerForMaking inventoryManagerForMaking;
-
-    public void InitializeInventorySlotsForMaking(InventoryManagerForMaking inventoryManagerForMaking)
+    public int craftingSlotIndex;
+    
+    [HideInInspector] public InventoryManagerForMaking inventoryManagerForMaking;
+    [HideInInspector] public InventoryItemForMaking inventoryItemForMaking;
+    
+    public void Start()
     {
-        this.inventoryManagerForMaking = inventoryManagerForMaking;
+        inventoryManagerForMaking = GameObject.Find("GameManager").GetComponent<InventoryManagerForMaking>();
     }
 
     public void ClickOnSlot()
@@ -25,6 +27,15 @@ public class InventorySlotForMaking : MonoBehaviour
         {
             inventoryItemForMaking = transform.GetComponentInChildren<InventoryItemForMaking>();
             inventoryItemForMaking.CheckIfHoldItemAndPutBackAndPickup();
+        }
+
+        foreach (var craftingSlot in inventoryManagerForMaking.craftingSlots)
+        {
+            if (transform == craftingSlot)
+            {
+                inventoryManagerForMaking.Crafting();
+                return;
+            }
         }
     }
 }
