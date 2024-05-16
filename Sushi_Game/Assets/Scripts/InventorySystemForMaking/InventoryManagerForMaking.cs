@@ -1,25 +1,38 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class InventoryManagerForMaking : MonoBehaviour
 {
     public GameObject inventoryItemPrefabForMaking;
     public Transform draggingItem;
+    public Transform craftingResultSlot;
+    public MoneyController moneyController;
+    //public List<Item> matchSushiList;
+    
+    public float remainingTime;
+
     public InventorySlotForMaking[] playerIngredientSlots;
     public Item[] sushiArray;
+    public Item[] sushiOrdersArray;
     public Dictionary<int, Sprite[]> RecipesDict = new Dictionary<int, Sprite[]>();
     public Transform[] craftingSlots;
-    public Transform craftingResultSlot;
-    //public List<Item> matchSushiList;
+    public Transform[] servingTable;
+    public Transform[] orderHanger;
+    
 
     public void Start()
     {
-        BringItemFromLastScene();
+        StartCoroutine(OrderMatching());
         RecipesDict.Add(0, sushiArray[0].recipe1);
         RecipesDict.Add(1, sushiArray[0].recipe2);
         RecipesDict.Add(2, sushiArray[0].recipe3);
+        BringItemFromLastScene();
+        
     }
 
     public void BringItemFromLastScene()
@@ -110,7 +123,7 @@ public class InventoryManagerForMaking : MonoBehaviour
 
         GameObject newItemGo = Instantiate(inventoryItemPrefabForMaking, craftingResultSlot);
         InventoryItemForMaking inventoryItemForMaking = newItemGo.GetComponent<InventoryItemForMaking>();
-        inventoryItemForMaking.InitializeItem(transform.GetComponent<InventoryManagerForMaking>());
+        inventoryItemForMaking.InitializeItemFromCrafting(transform.GetComponent<InventoryManagerForMaking>());
         inventoryItemForMaking.image.sprite = sushiImage;
     }
 
@@ -135,6 +148,36 @@ public class InventoryManagerForMaking : MonoBehaviour
         }
 
         Crafting();
+    }
+
+    public void Update()
+    {
+        remainingTime = transform.GetComponent<CountDownTimer>().remainingTime;
+    }
+
+    IEnumerator OrderMatching()
+    {
+        while (remainingTime > 0f)
+        {
+            int randomNum = Random.Range(0, sushiArray.Length);
+            yield return new WaitForSeconds(Random.Range(0.5f, 3f));
+            Debug.Log("order");
+
+            foreach (var orderSlot in orderHanger)
+            {
+                if (orderSlot.childCount == 0)
+                {
+                    GameObject order = Instantiate(inventoryItemPrefabForMaking, orderSlot);
+                    InventoryItemForMaking inventoryItemForMaking = order.GetComponent<InventoryItemForMaking>();
+                    order.GetComponent<Image>().raycastTarget = false;
+                    order.transform.GetComponentInChildren<TMP_Text>().alpha = 0;
+                    inventoryItemForMaking.sushiSpriteOnOrder = sushiArray[randomNum].image;
+                    inventoryItemForMaking.orderPrice = sushiOrdersArray[randomNum].price;
+                    inventoryItemForMaking.InitializeOrder(transform.GetComponent<InventoryManagerForMaking>());
+                    break;
+                }
+            }
+        }
     }
 
     /*public void Crafting(Transform clickedCraftingSlot, int clickedCraftingSlotIndex)

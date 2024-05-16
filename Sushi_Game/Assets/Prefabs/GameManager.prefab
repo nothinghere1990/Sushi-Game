@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -7639093238739766943}
   - component: {fileID: -4109122796363850331}
   - component: {fileID: -3677336001211407975}
+  - component: {fileID: -9061346538054340975}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -98,7 +99,8 @@ MonoBehaviour:
   inventorySlots: []
   inventoryItemPrefab: {fileID: 229089904052840823, guid: da70064b85076734499857b0b1e4059b, type: 3}
   moneyController: {fileID: 0}
-  notificationController: {fileID: 0}
+  nonStaticCarryPlayerIngredientImgs: []
+  nonStaticCarryPlayerIngredientCounts: 
 --- !u!114 &-4109122796363850331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,8 +128,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bdcf7b3611df2447adc81acfd4a0f97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIngredientSlots: []
   inventoryItemPrefabForMaking: {fileID: 0}
+  draggingItem: {fileID: 0}
+  playerIngredientSlots: []
+  sushiArray: []
+  craftingSlots: []
+  craftingResultSlot: {fileID: 0}
+--- !u!114 &-9061346538054340975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629757997677409311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da8fc38fd3b6c2b40b8d0f15a058039b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countDownTimerText: {fileID: 0}
+  remainingTime: 0
 --- !u!1 &2365795701758282275
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f814d85b2faa3ef4ea15620b35969a1c, type: 3}
   m_Name: Seaweed
   m_EditorClassIdentifier: 
-  image: {fileID: 21300000, guid: 12963062d5c9d5a4aac0efae2d8adde2, type: 3}
+  image: {fileID: 21300000, guid: 38ee3d6b5d6b3984caed631dfe244f2c, type: 3}
   isRice: 0
   price: 3
   recipe1:

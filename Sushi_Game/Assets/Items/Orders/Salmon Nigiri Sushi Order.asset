@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f814d85b2faa3ef4ea15620b35969a1c, type: 3}
-  m_Name: Beef
+  m_Name: Salmon Nigiri Sushi Order
   m_EditorClassIdentifier: 
-  image: {fileID: 21300000, guid: ef07489ebe7799d479f44d07f5fc27a7, type: 3}
+  image: {fileID: 21300000, guid: a7862833b1abbf74583921bba1bad5cc, type: 3}
   isRice: 0
-  price: 20
+  price: 14
   recipe1:
   - {fileID: 0}
   - {fileID: 0}

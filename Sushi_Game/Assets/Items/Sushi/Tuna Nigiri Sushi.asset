@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f814d85b2faa3ef4ea15620b35969a1c, type: 3}
   m_Name: Tuna Nigiri Sushi
   m_EditorClassIdentifier: 
-  image: {fileID: 21300000, guid: 74e4bebebc382334f93c10b607714c96, type: 3}
+  image: {fileID: 21300000, guid: f919ba9629f68da4684bd1f2a11c6087, type: 3}
   isRice: 0
   price: 0
   recipe1:

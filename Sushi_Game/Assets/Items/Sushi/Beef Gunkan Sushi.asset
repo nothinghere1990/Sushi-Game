@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f814d85b2faa3ef4ea15620b35969a1c, type: 3}
   m_Name: Beef Gunkan Sushi
   m_EditorClassIdentifier: 
-  image: {fileID: 21300000, guid: f229012dd9d1d8d4bbc58e456a606c4f, type: 3}
+  image: {fileID: 21300000, guid: 3cd647a0853b73541b3cbcee84b29848, type: 3}
   isRice: 0
   price: 0
   recipe1:
-  - {fileID: 21300000, guid: 12963062d5c9d5a4aac0efae2d8adde2, type: 3}
-  - {fileID: 21300000, guid: 9fa6ef92d80b0bd498bc640108a636f0, type: 3}
-  - {fileID: 21300000, guid: 42e7b80e920171a49b6f5d30992ea54e, type: 3}
+  - {fileID: 21300000, guid: 38ee3d6b5d6b3984caed631dfe244f2c, type: 3}
+  - {fileID: 21300000, guid: d8c2c97fab6609542b3829d777a5e620, type: 3}
+  - {fileID: 21300000, guid: ef07489ebe7799d479f44d07f5fc27a7, type: 3}
   recipe2:
-  - {fileID: 21300000, guid: 12963062d5c9d5a4aac0efae2d8adde2, type: 3}
-  - {fileID: 21300000, guid: 9fa6ef92d80b0bd498bc640108a636f0, type: 3}
-  - {fileID: 21300000, guid: 42e7b80e920171a49b6f5d30992ea54e, type: 3}
+  - {fileID: 21300000, guid: 38ee3d6b5d6b3984caed631dfe244f2c, type: 3}
+  - {fileID: 21300000, guid: d8c2c97fab6609542b3829d777a5e620, type: 3}
+  - {fileID: 21300000, guid: ef07489ebe7799d479f44d07f5fc27a7, type: 3}
   recipe3:
-  - {fileID: 21300000, guid: 12963062d5c9d5a4aac0efae2d8adde2, type: 3}
-  - {fileID: 21300000, guid: 9fa6ef92d80b0bd498bc640108a636f0, type: 3}
-  - {fileID: 21300000, guid: 42e7b80e920171a49b6f5d30992ea54e, type: 3}
+  - {fileID: 21300000, guid: 38ee3d6b5d6b3984caed631dfe244f2c, type: 3}
+  - {fileID: 21300000, guid: d8c2c97fab6609542b3829d777a5e620, type: 3}
+  - {fileID: 21300000, guid: ef07489ebe7799d479f44d07f5fc27a7, type: 3}

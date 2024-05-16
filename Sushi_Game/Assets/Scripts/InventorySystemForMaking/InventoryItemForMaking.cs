@@ -1,14 +1,16 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class InventoryItemForMaking : MonoBehaviour
 {
-    public Item item;
     public Transform parentAfterDrag;
     public int itemCount = 1;
     public Image image;
+    public Sprite sushiSpriteOnOrder;
+    public int orderPrice;
 
     [HideInInspector] public InventoryManagerForMaking inventoryManagerForMaking;
     [HideInInspector] public TMP_Text itemCountText;
@@ -22,10 +24,31 @@ public class InventoryItemForMaking : MonoBehaviour
         this.inventoryManagerForMaking = inventoryManagerForMaking;
     }
 
-    public void InitializeItem(InventoryManagerForMaking inventoryManagerForMaking)
+    public void InitializeItemFromCrafting(InventoryManagerForMaking inventoryManagerForMaking)
     {
         this.inventoryManagerForMaking = inventoryManagerForMaking;
         itemCountText.text = itemCount.ToString();
+    }
+
+    public void InitializeOrder(InventoryManagerForMaking inventoryManagerForMaking)
+    {
+        this.inventoryManagerForMaking = inventoryManagerForMaking;
+        SushiMatching();
+    }
+
+    public void SushiMatching()
+    {
+        while (true)
+        {
+            foreach (var servingSlot in inventoryManagerForMaking.servingTable)
+            {
+                if (servingSlot.childCount != 0 &&
+                    servingSlot.GetChild(0).GetComponent<Image>().sprite == sushiSpriteOnOrder)
+                {
+                    inventoryManagerForMaking.moneyController.MakingEarnMoney(orderPrice);
+                }
+            }
+        }
     }
 
     public void CheckIfHoldItemAndPutBackAndPickup()

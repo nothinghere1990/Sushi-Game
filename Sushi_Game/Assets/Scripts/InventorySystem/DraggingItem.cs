@@ -76,12 +76,12 @@ public class DraggingItem : MonoBehaviour
                         if (i < inventoryManager.inventorySlots.Length / 2 &&
                             j >= inventoryManager.inventorySlots.Length / 2)
                         {
-                            moneyController.EarnMoney(itemPrice * inventoryManager.currentDraggingItem.itemCount);
+                            moneyController.StockingEarnMoney(itemPrice * inventoryManager.currentDraggingItem.itemCount);
                         }
                         else if (i >= inventoryManager.inventorySlots.Length / 2 &&
                                  j < inventoryManager.inventorySlots.Length / 2)
                         {
-                            moneyController.SpendMoney(itemPrice * inventoryManager.currentDraggingItem.itemCount);
+                            moneyController.StockingSpendMoney(itemPrice * inventoryManager.currentDraggingItem.itemCount);
                         }
                     }
                 }

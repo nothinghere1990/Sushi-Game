@@ -426,6 +426,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5430662832435858898, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7037986344815915620, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}
       propertyPath: m_Name
       value: InventorySlotForMaking (1)
@@ -744,6 +748,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5430662832435858898, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7037986344815915620, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}
       propertyPath: m_Name
       value: InventorySlotForMaking (3)
@@ -935,7 +943,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3:00
+  m_text: 03:00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 03d835e2332eae549937f0b3666e9929, type: 2}
   m_sharedMaterial: {fileID: 6228456248577330985, guid: 03d835e2332eae549937f0b3666e9929, type: 2}
@@ -1217,7 +1225,7 @@ GameObject:
   - component: {fileID: 1060956384}
   - component: {fileID: 1060956383}
   m_Layer: 5
-  m_Name: OutputTable
+  m_Name: ServingTable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1240,10 +1248,10 @@ RectTransform:
   - {fileID: 1021425901}
   m_Father: {fileID: 1882460165}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -278.00214, y: 394}
-  m_SizeDelta: {x: -680.953, y: 101.8972}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 255.49786, y: 94}
+  m_SizeDelta: {x: 386.047, y: 101.89722}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1060956383
 MonoBehaviour:
@@ -1267,7 +1275,7 @@ MonoBehaviour:
   rows: 1
   columns: 3
   cellSize: {x: 100, y: 100}
-  spacing: {x: 43.12036, y: 127.602295}
+  spacing: {x: 43.0235, y: 127.602295}
   fitSpacingX: 1
   fitSpacingY: 0
 --- !u!114 &1060956384
@@ -1711,7 +1719,7 @@ MonoBehaviour:
   rows: 1
   columns: 5
   cellSize: {x: 100, y: 100}
-  spacing: {x: 110.56473, y: 127.602295}
+  spacing: {x: 110.513275, y: 127.602295}
   fitSpacingX: 1
   fitSpacingY: 0
 --- !u!1001 &1364434981
@@ -1845,19 +1853,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4100273929581195857, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4100273929581195857, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4100273929581195857, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4100273929581195857, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4100273929581195857, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1897,11 +1905,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4100273929581195857, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 942.09
+      value: -124.90997
       objectReference: {fileID: 0}
     - target: {fileID: 4100273929581195857, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -362.5
+      value: -62.5
       objectReference: {fileID: 0}
     - target: {fileID: 4100273929581195857, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1937,9 +1945,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9061346538054340975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -9061346538054340975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: remainingTime
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: -9061346538054340975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: countDownTimerText
+      value: 
+      objectReference: {fileID: 668486249}
     - target: {fileID: -7639093238739766943, guid: 0988977b79ed271458bbe53372428b60, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7639093238739766943, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: moneyController
+      value: 
+      objectReference: {fileID: 1645295057}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: remainingTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
       propertyPath: craftingResultSlot
@@ -1948,6 +1976,14 @@ PrefabInstance:
     - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
       propertyPath: sushiArray.Array.size
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: orderHanger.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: servingTable.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
       propertyPath: craftingSlots.Array.size
@@ -1978,6 +2014,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 36194c0f261240047b0ca150122640cb, type: 2}
     - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: orderHanger.Array.data[0]
+      value: 
+      objectReference: {fileID: 2081202040}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: orderHanger.Array.data[1]
+      value: 
+      objectReference: {fileID: 195333778}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: orderHanger.Array.data[2]
+      value: 
+      objectReference: {fileID: 1647172640}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: orderHanger.Array.data[3]
+      value: 
+      objectReference: {fileID: 500707366}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: servingTable.Array.data[0]
+      value: 
+      objectReference: {fileID: 1685945671}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: servingTable.Array.data[1]
+      value: 
+      objectReference: {fileID: 1246612565}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: servingTable.Array.data[2]
+      value: 
+      objectReference: {fileID: 1021425901}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
       propertyPath: craftingSlots.Array.data[0]
       value: 
       objectReference: {fileID: 1775462488}
@@ -1994,9 +2058,37 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 29468967}
     - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: sushiOrdersArray.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
       propertyPath: inventoryItemPrefabForMaking
       value: 
       objectReference: {fileID: 7675342078256702827, guid: 5c6299cdbc02bb54684ae6f2d6035174, type: 3}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: sushiOrdersArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 831ac1cd67594214cb04f95da5744b07, type: 2}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: sushiOrdersArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: d803a811901f19e4f8f6b83d77f14d38, type: 2}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: sushiOrdersArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: d271425359817e64da0b57edde2fac14, type: 2}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: sushiOrdersArray.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 194f816681450ba4fa1eb1a21ed3d070, type: 2}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: sushiOrdersArray.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 739cc076d07f27d4aa88077ea69baa62, type: 2}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: sushiOrdersArray.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 36194c0f261240047b0ca150122640cb, type: 2}
     - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
       propertyPath: playerIngredientSlots.Array.size
       value: 5
@@ -2116,9 +2208,9 @@ RectTransform:
   - {fileID: 500707366}
   m_Father: {fileID: 1882460165}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 235.53, y: 93.051}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -297.47, y: 93.051}
   m_SizeDelta: {x: 471.06, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1639383722
@@ -2382,6 +2474,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4100273929581195857, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430662832435858898, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7037986344815915620, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}
@@ -2852,9 +2948,9 @@ RectTransform:
   - {fileID: 29468967}
   m_Father: {fileID: 1882460165}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -104.59279, y: -62.5}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 428.40723, y: -62.5}
   m_SizeDelta: {x: 731.9844, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1849131482
@@ -3223,6 +3319,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4100273929581195857, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430662832435858898, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7037986344815915620, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}

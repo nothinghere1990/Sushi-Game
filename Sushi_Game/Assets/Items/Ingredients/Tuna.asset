@@ -12,8 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f814d85b2faa3ef4ea15620b35969a1c, type: 3}
   m_Name: Tuna
   m_EditorClassIdentifier: 
-  image: {fileID: 21300000, guid: 34be89e15017ddb4b96a551ad1b0605e, type: 3}
-  itemType: 0
-  stackble: 1
+  image: {fileID: 21300000, guid: ce2bef3005c02604c933238b0b4966cf, type: 3}
   isRice: 0
   price: 10
+  recipe1:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  recipe2:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  recipe3:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

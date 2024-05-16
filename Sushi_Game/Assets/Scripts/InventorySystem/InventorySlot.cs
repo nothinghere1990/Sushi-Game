@@ -28,13 +28,13 @@ public class InventorySlot : MonoBehaviour
                         if (i < inventoryManager.inventorySlots.Length / 2 &&
                             j >= inventoryManager.inventorySlots.Length / 2)
                         {
-                            moneyController.EarnMoney(inventoryManager.currentDraggingItem.itemPrice *
+                            moneyController.StockingEarnMoney(inventoryManager.currentDraggingItem.itemPrice *
                                                       inventoryManager.currentDraggingItem.itemCount);
                         }
                         else if (i >= inventoryManager.inventorySlots.Length / 2 &&
                                  j < inventoryManager.inventorySlots.Length / 2)
                         {
-                            moneyController.SpendMoney(inventoryManager.currentDraggingItem.itemPrice *
+                            moneyController.StockingSpendMoney(inventoryManager.currentDraggingItem.itemPrice *
                                                        inventoryManager.currentDraggingItem.itemCount);
                         }
                     }

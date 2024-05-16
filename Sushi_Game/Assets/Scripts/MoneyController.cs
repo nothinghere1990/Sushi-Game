@@ -25,15 +25,21 @@ public class MoneyController : MonoBehaviour
         }
     }
 
-    public void SpendMoney(int itemPrice)
+    public void StockingSpendMoney(int itemPrice)
     {
         PlayerMoney -= itemPrice;
         playerMoneyText.text = "$" + PlayerMoney;
     }
 
-    public void EarnMoney(int itemPrice)
+    public void StockingEarnMoney(int itemPrice)
     {
         PlayerMoney += itemPrice;
         playerMoneyText.text = "$" + PlayerMoney;
+    }
+
+    public void MakingEarnMoney(int orderPrice)
+    {
+        PlayerMoney += orderPrice;
+        playerMoneyText.text = "$" + PlayerMoney + " / " + "$" + targetMoney;
     }
 }

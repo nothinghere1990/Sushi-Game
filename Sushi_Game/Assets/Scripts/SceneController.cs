@@ -65,5 +65,11 @@ public class SceneController : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         sceneTransition.SetActive(false);
         isChangeing = false;
+        switch (SceneManager.GetActiveScene().buildIndex)
+        {
+            case 2:
+                transform.GetComponent<CountDownTimer>().enabled = true;
+                break;
+        }
     }
 }
