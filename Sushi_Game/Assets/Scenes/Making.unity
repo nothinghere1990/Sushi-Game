@@ -324,6 +324,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5430662832435858898, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7037986344815915620, guid: 59eb4749c3531ad4f9b4ac58cc63f01f, type: 3}
       propertyPath: m_Name
       value: InventorySlotForMaking (3)
@@ -1966,9 +1970,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1645295057}
     - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
-      propertyPath: remainingTime
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: moneyController
+      value: 
+      objectReference: {fileID: 1645295057}
     - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
       propertyPath: craftingResultSlot
       value: 
@@ -2068,27 +2072,31 @@ PrefabInstance:
     - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
       propertyPath: sushiOrdersArray.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 831ac1cd67594214cb04f95da5744b07, type: 2}
+      objectReference: {fileID: 11400000, guid: d2ff80686a6860448b1cfc954eabc4ba, type: 2}
     - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
       propertyPath: sushiOrdersArray.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: d803a811901f19e4f8f6b83d77f14d38, type: 2}
+      objectReference: {fileID: 11400000, guid: dd9a205fd17bfe24b90e7f1fda3b042e, type: 2}
     - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
       propertyPath: sushiOrdersArray.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: d271425359817e64da0b57edde2fac14, type: 2}
+      objectReference: {fileID: 11400000, guid: 8dedf19e109fa284f99929a02bb149a3, type: 2}
     - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
       propertyPath: sushiOrdersArray.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 194f816681450ba4fa1eb1a21ed3d070, type: 2}
+      objectReference: {fileID: 11400000, guid: c7cec59c11dc4b144a9be78261d1755c, type: 2}
     - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
       propertyPath: sushiOrdersArray.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: 739cc076d07f27d4aa88077ea69baa62, type: 2}
+      objectReference: {fileID: 11400000, guid: 6f57f040f82fc0d458787a7452afda88, type: 2}
     - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
       propertyPath: sushiOrdersArray.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: 36194c0f261240047b0ca150122640cb, type: 2}
+      objectReference: {fileID: 11400000, guid: ad9f5cf76e168a949822aa76098005b7, type: 2}
+    - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
+      propertyPath: sushiOrdersArray.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8dedf19e109fa284f99929a02bb149a3, type: 2}
     - target: {fileID: -3677336001211407975, guid: 0988977b79ed271458bbe53372428b60, type: 3}
       propertyPath: playerIngredientSlots.Array.size
       value: 5

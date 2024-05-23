@@ -130,10 +130,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryItemPrefabForMaking: {fileID: 0}
   draggingItem: {fileID: 0}
+  craftingResultSlot: {fileID: 0}
+  moneyController: {fileID: 0}
+  remainingTime: 0
   playerIngredientSlots: []
   sushiArray: []
+  sushiOrdersArray: []
   craftingSlots: []
-  craftingResultSlot: {fileID: 0}
+  servingTable: []
+  orderHanger: []
 --- !u!114 &-9061346538054340975
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1977,6 +1977,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1f930f98251782c42bf207e48066b0a5, type: 2}
   - {fileID: 11400000, guid: b1ec77fac424bed44a1b87d98acbb83e, type: 2}
   - {fileID: 11400000, guid: bcde682bfcfd81741b7dbc623c979657, type: 2}
+  moneyController: {fileID: 4751603842860285524}
+  stockingCost: 50
 --- !u!1 &1102396283
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -13,8 +14,6 @@ public class InventoryManagerForMaking : MonoBehaviour
     public Transform craftingResultSlot;
     public MoneyController moneyController;
     //public List<Item> matchSushiList;
-    
-    public float remainingTime;
 
     public InventorySlotForMaking[] playerIngredientSlots;
     public Item[] sushiArray;
@@ -27,12 +26,11 @@ public class InventoryManagerForMaking : MonoBehaviour
 
     public void Start()
     {
-        StartCoroutine(OrderMatching());
         RecipesDict.Add(0, sushiArray[0].recipe1);
         RecipesDict.Add(1, sushiArray[0].recipe2);
         RecipesDict.Add(2, sushiArray[0].recipe3);
+        StartCoroutine(OrderMatching());
         BringItemFromLastScene();
-        
     }
 
     public void BringItemFromLastScene()
@@ -150,18 +148,12 @@ public class InventoryManagerForMaking : MonoBehaviour
         Crafting();
     }
 
-    public void Update()
-    {
-        remainingTime = transform.GetComponent<CountDownTimer>().remainingTime;
-    }
-
     IEnumerator OrderMatching()
     {
-        while (remainingTime > 0f)
+        while (transform.GetComponent<CountDownTimer>().remainingTime > 0)
         {
             int randomNum = Random.Range(0, sushiArray.Length);
-            yield return new WaitForSeconds(Random.Range(0.5f, 3f));
-            Debug.Log("order");
+            yield return new WaitForSeconds(Random.Range(.5f, 3f));
 
             foreach (var orderSlot in orderHanger)
             {
@@ -171,6 +163,7 @@ public class InventoryManagerForMaking : MonoBehaviour
                     InventoryItemForMaking inventoryItemForMaking = order.GetComponent<InventoryItemForMaking>();
                     order.GetComponent<Image>().raycastTarget = false;
                     order.transform.GetComponentInChildren<TMP_Text>().alpha = 0;
+                    order.GetComponent<Image>().sprite = sushiOrdersArray[randomNum].image;
                     inventoryItemForMaking.sushiSpriteOnOrder = sushiArray[randomNum].image;
                     inventoryItemForMaking.orderPrice = sushiOrdersArray[randomNum].price;
                     inventoryItemForMaking.InitializeOrder(transform.GetComponent<InventoryManagerForMaking>());

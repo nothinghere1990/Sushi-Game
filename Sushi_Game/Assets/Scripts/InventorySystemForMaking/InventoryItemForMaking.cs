@@ -1,5 +1,5 @@
 using System;
-using System.Collections.Generic;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,20 +33,14 @@ public class InventoryItemForMaking : MonoBehaviour
     public void InitializeOrder(InventoryManagerForMaking inventoryManagerForMaking)
     {
         this.inventoryManagerForMaking = inventoryManagerForMaking;
-        SushiMatching();
-    }
-
-    public void SushiMatching()
-    {
-        while (true)
+        foreach (var servingSlot in inventoryManagerForMaking.servingTable)
         {
-            foreach (var servingSlot in inventoryManagerForMaking.servingTable)
+            if (servingSlot.childCount != 0 &&
+                servingSlot.GetChild(0).GetComponent<Image>().sprite == sushiSpriteOnOrder)
             {
-                if (servingSlot.childCount != 0 &&
-                    servingSlot.GetChild(0).GetComponent<Image>().sprite == sushiSpriteOnOrder)
-                {
-                    inventoryManagerForMaking.moneyController.MakingEarnMoney(orderPrice);
-                }
+                inventoryManagerForMaking.moneyController.MakingEarnMoney(orderPrice);
+                Destroy(servingSlot.GetChild(0).gameObject);
+                DestroyImmediate(gameObject);
             }
         }
     }

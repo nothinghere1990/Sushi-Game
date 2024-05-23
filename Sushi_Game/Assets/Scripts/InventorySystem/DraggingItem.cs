@@ -178,6 +178,11 @@ public class DraggingItem : MonoBehaviour
             itemCount = 1;
         }
 
+        if (parentAfterDrag.childCount != 0)
+        {
+            parentAfterDrag.GetComponent<Image>().raycastTarget = false;
+        }
+
         RefreshCount();
     }
 
